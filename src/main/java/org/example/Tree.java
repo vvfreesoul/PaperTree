@@ -1,6 +1,7 @@
 package org.example;
 
-import java.util.List;
+import java.util.*;
+
 
 class Tree{
     private Node root = new Node(0);    //树的根节点
