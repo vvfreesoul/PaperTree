@@ -18,6 +18,22 @@ class Node{
         this.Id = Id;
         this.data = data;
     }
+    public Node(int Id,int type,int level){
+        this.Id = Id;
+        this.type = type;
+        this.level=level;
+    }
+    public Node(int Id,int type,int level,int alpha,int beta){
+        this.Id = Id;
+        this.type = type;
+        this.level=level;
+        this.alpha=alpha;
+        this.beta=beta;
+    }
+    public int getType(){return type;}
+    public int getLevel(){return level;}
+    public int getAlpha(){return alpha;}
+    public int getBeta(){return beta;}
     public int getId() {
         return Id;
     }

@@ -1,6 +1,7 @@
 package org.example;
 
-import java.util.ArrayList;
+import javafx.util.Pair;
+
 import java.util.*;
 
 /**
@@ -9,18 +10,20 @@ import java.util.*;
  */
 public class  App<i>
 {
-    Tree TRSTree(List<Map<Integer, Integer>> avg_host,List<Map<Integer, Integer>> avg_data,int fanout)
+    Node TRSTree(List<Map<Integer, Integer>> avg_host,List<Map<Integer, Integer>> avg_data,int fanout)
     {
-
+        int nodecount=0;
+        int level=0;
+        Node root=new Node(nodecount,0,level);
+        nodecount++;
+        level++;
+        Pair<List<Map<Integer, Integer>>, List<Map<Integer, Integer>>> avg_pair = new Pair<>(avg_host, avg_data);
+        return root;
     }
     public static void main( String[] args )
     {
         List<Map<Integer, Integer>> avg_host=new ArrayList<>();
         List<Map<Integer, Integer>> avg_data=new ArrayList<>();
-//        Random random = new Random();
-//        Random random2 = new Random();
-//        System.out.println(random.nextInt((128)));
-//        System.out.println(random.nextInt((128)));
 
         for(int i=0;i<100000;i++)
         {
