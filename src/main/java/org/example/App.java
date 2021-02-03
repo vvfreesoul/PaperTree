@@ -1,15 +1,34 @@
 package org.example;
 
-import javafx.util.Pair;
+import com.sun.tools.javac.util.Pair;
 
 import java.util.*;
-
 /**
  * Hello world!
  *
  */
 public class  App<i>
 {
+    List<Node> SplitNode(Node node,int fanout)
+    {
+        List<Node> listnode=new ArrayList<Node>();
+    }
+    boolean Validate(List<Map<Integer, Integer>> avg_host,List<Map<Integer, Integer>> avg_data,Node node)
+    {
+//        Iterator<String> it = strList.iterator();
+//        while (it.hasNext()) {
+//            String str = (String) it.next();
+//            System.out.println(str);
+        for(int i=0;i<avg_host.size();i++)
+        {
+            //计算两个点是否线性相关
+            //线性相关则继续
+            //线性不相关则把点存一下最起码存一下，先不考虑存了之后的操作
+        }
+        if(node.ouliers.size()>outlier_ratio*avg_data.size())
+            return false;
+        return true;
+    }
     Node TRSTree(List<Map<Integer, Integer>> avg_host,List<Map<Integer, Integer>> avg_data,int fanout)
     {
         int nodecount=0;
@@ -18,6 +37,9 @@ public class  App<i>
         nodecount++;
         level++;
         Pair<List<Map<Integer, Integer>>, List<Map<Integer, Integer>>> avg_pair = new Pair<>(avg_host, avg_data);
+        Pair<Node,List<Map<Integer, Integer>>> queue_pair=new Pair<>(root,avg_data);
+//        Queue<Pair<Node,List<Map<Integer, Integer>>>>=new
+//        while()
         return root;
     }
     public static void main( String[] args )
