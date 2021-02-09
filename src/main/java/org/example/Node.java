@@ -40,6 +40,8 @@ class Node{
     public void setId(int id) {
         Id = id;
     }
+    public void setAlpha(int a) {alpha=a;}
+    public void setBeta(int b){beta=b;}
     public String getData() {
         return data;
     }
